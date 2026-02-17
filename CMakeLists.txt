@@ -9,6 +9,9 @@ include(FetchContent)
 
 add_executable(${PROJECT_NAME}
 
+
+    "${CMAKE_CURRENT_SOURCE_DIR}/glad/glad.c"
+
     "${CMAKE_CURRENT_SOURCE_DIR}/src/main.cpp"
 
 )
@@ -33,7 +36,7 @@ target_link_libraries(${PROJECT_NAME}
     glfw3 glm 
 )
 
-target_include_directories(${PROJECT_NAME}
+target_include_directories(${PROJECT_NAME} PRIVATE
 
     "${CMAKE_CURRENT_SOURCE_DIR}/include"
 
