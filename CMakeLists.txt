@@ -28,12 +28,22 @@ FetchContent_Declare(
     GIT_TAG 1.0.3
 )
 
+FetchContent_Declare(
+    openxr
+    GIT_REPOSITORY https://github.com/KhronosGroup/OpenXR-SDK
+    GIT_TAG release-1.1.57
+)
+
+
+
 FetchContent_MakeAvailable(glfw)
 
 FetchContent_MakeAvailable(glm)
 
+FetchContent_MakeAvailable(openxr)
+
 target_link_libraries(${PROJECT_NAME}
-    glfw3 glm 
+    glfw3 glm openxr_loader
 )
 
 target_include_directories(${PROJECT_NAME} PRIVATE
