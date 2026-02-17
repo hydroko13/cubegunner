@@ -32,3 +32,9 @@ FetchContent_MakeAvailable(glm)
 target_link_libraries(${PROJECT_NAME}
     glfw3 glm 
 )
+
+target_include_directories(${PROJECT_NAME}
+
+    "${CMAKE_CURRENT_SOURCE_DIR}/include"
+
+)
